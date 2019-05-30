@@ -1,0 +1,16 @@
+{
+  "name": "rse-pact-sample-consumer-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sylvain Faucherand <syl.faucherand@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/app"
+  },
+  "dependencies": {
+    "@pact-foundation/pact": "^8.2.4",
+    "axios": "^0.18.0",
+    "express": "^4.17.1",
+    "jest": "^24.8.0"
+  }
+}
