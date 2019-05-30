@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker run \
+    -it \
+    --rm \
+    -p 8989:8989 \
+    -v "$(pwd)/pacts/:/app/pacts" \
+    pactfoundation/pact-stub-server \
+        -p 8989 \
+        -d pacts

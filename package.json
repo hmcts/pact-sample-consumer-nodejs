@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/app",
-    "test:pact": "rm -rf pacts && jest **/__tests__/*.test.js --runInBand"
+    "test:pact": "rm -rf pacts && jest **/__tests__/*.test.js --runInBand",
+    "mock": "./bin/pact-stub"
   },
   "dependencies": {
     "@pact-foundation/pact": "^8.2.4",
