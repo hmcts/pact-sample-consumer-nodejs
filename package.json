@@ -5,7 +5,8 @@
   "author": "Sylvain Faucherand <syl.faucherand@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/app"
+    "start": "node src/app",
+    "test:pact": "rm -rf pacts && jest **/__tests__/*.test.js --runInBand"
   },
   "dependencies": {
     "@pact-foundation/pact": "^8.2.4",
