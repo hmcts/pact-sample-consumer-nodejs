@@ -1,12 +1,28 @@
-# Pact consumer sample with nodeJS
+# Pact consumer sample with nodeJS
 
-## Generate Pact contracts
+## Generate Pact contracts
 
 You may use a provider (mock server) and add create some tests hitting this server to make sure your codebase is compliant with your expected provider interactions.
 
 ```bash
 $ yarn test:pact
 ```
+
+## Publish Pact contracts
+
+You can start a local broker server using the following command:
+
+```bash
+$ yarn broker # To stop the broker use `yarn broker:stop`
+```
+
+Then trigger the publication of the contract:
+
+```bash
+$ yarn test:pact:publish
+```
+
+The broker UI is visible on http://localhost
 
 ## Use Pact contracts to run a stub server
 

@@ -7,12 +7,17 @@
   "scripts": {
     "start": "node src/app",
     "test:pact": "rm -rf pacts && jest **/__tests__/*.test.js --runInBand",
-    "mock": "./bin/pact-stub"
+    "test:pact:publish": "./bin/pact-publish",
+    "mock": "./bin/pact-stub",
+    "broker": "docker-compose -f broker-compose.yaml up -d",
+    "broker:stop": "docker-compose -f broker-compose.yaml down"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^8.2.4",
+    "jest": "^24.8.0"
   },
   "dependencies": {
-    "@pact-foundation/pact": "^8.2.4",
     "axios": "^0.18.0",
-    "express": "^4.17.1",
-    "jest": "^24.8.0"
+    "express": "^4.17.1"
   }
 }

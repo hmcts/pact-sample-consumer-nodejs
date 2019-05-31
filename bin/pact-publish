@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const pact = require("@pact-foundation/pact-node");
+const { execSync } = require("child_process");
+const packageVersion = require("../package.json").version;
+
+async function main() {
+  const gitHead = await execSync("git rev-parse --short HEAD");
+  const consumerVersion = `${packageVersion}-${gitHead.toString().trim()}`;
+
+  await pact.publishPacts({
+    pactFilesOrDirs: ["pacts/"],
+    pactBroker: "http://localhost",
+    consumerVersion,
+    tags: ["staging"]
+  });
+
+  process.exit(0);
+}
+
+main();
