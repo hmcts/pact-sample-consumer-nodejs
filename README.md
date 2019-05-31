@@ -1,5 +1,15 @@
 # Pact consumer sample with nodeJS
 
+You can use git tags to follow the implementation steps:
+
+```
+git tag -n
+
+step-1   Generate Pact contract
+step-2   Use pact contract to run a stub server
+step-3   Publish the contract on a broker
+```
+
 ## Generate Pact contracts
 
 You may use a provider (mock server) and add create some tests hitting this server to make sure your codebase is compliant with your expected provider interactions.
